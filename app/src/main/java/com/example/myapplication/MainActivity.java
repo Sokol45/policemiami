@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         SQLiteDatabase db = getBaseContext().openOrCreateDatabase("Users.db", MODE_PRIVATE, null);
         db.execSQL("CREATE TABLE IF NOT EXISTS users (login TEXT, password TEXT)");
         Cursor query = db.rawQuery("SELECT * FROM users;", null);
-
+//text branch
         while(query.moveToNext()){
             String login = query.getString(0);
             String password = query.getString(1);
